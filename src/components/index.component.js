@@ -31,7 +31,7 @@ export default class Index extends Component {
 
   componentDidMount = () => {
     axios
-      .get("http://localhost:4000/business")
+      .get("https://fast-temple-84635.herokuapp.com/business")
       .then(response => {
         this.setState({
           business: response.data,
@@ -64,7 +64,7 @@ export default class Index extends Component {
     console.log("delete index axios");
     axios
       .get(
-        "http://localhost:4000/business/delete/" +
+        "https://fast-temple-84635.herokuapp.com/business/delete/" +
           this.state.business[index]._id
       )
       .then(res => {

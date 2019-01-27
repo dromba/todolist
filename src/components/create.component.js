@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import constants from "./constants";
 
 export default class Create extends Component {
   constructor(props) {
@@ -53,7 +54,7 @@ export default class Create extends Component {
     };
     console.log(obj);
     axios
-      .post("http://localhost:4000/business/add", obj)
+      .post("https://fast-temple-84635.herokuapp.com/business/add", obj)
       .then(res => console.log(res.data));
     this.props.addBusiness(obj);
     this.setState({
@@ -66,10 +67,10 @@ export default class Create extends Component {
   render() {
     return (
       <div style={{ marginTop: 10 }}>
-        <h3>Add New Task</h3>
+        <h3>{constants.ADD_NEW_TASK}</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group">
-            <label>ID: </label>
+            <label>{constants.ID}{constants.COLON} </label>
             <input
               type="text"
               className="form-control"
@@ -78,7 +79,7 @@ export default class Create extends Component {
             />
           </div>
           <div className="form-group">
-            <label>Job Title: </label>
+            <label>{constants.JOB_TITLE}{constants.COLON} </label>
             <input
               type="text"
               className="form-control"
@@ -87,7 +88,7 @@ export default class Create extends Component {
             />
           </div>
           <div className="form-group">
-            <label>Job Description: </label>
+            <label>{constants.JOB_DESCRIPTION}{constants.COLON} </label>
             <input
               type="text"
               className="form-control"

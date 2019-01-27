@@ -21,7 +21,7 @@ export default class Edit extends Component {
 
   componentDidMount= () => {
     axios
-      .get("http://localhost:4000/business/edit/" + this.props.id)
+      .get("https://fast-temple-84635.herokuapp.com/business/edit/" + this.props.id)
       .then(response => {
         this.setState({
           id: response.data.id,
@@ -68,7 +68,7 @@ export default class Edit extends Component {
       record_created: this.state.record_created
     };
     axios
-      .post("http://localhost:4000/business/update/" + this.props.id, obj)
+      .post("https://fast-temple-84635.herokuapp.com/business/update/" + this.props.id, obj)
       .then(res => console.log(res.data));
     this.props.refreshState(obj);
   }
@@ -76,7 +76,7 @@ export default class Edit extends Component {
   render() {
     return (
       <div style={{ marginTop: 10 }}>
-        <h3 align="center">Update Task</h3>
+        <h3 align="center">{constants.UPDATE_TASK}</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group">
             <label>{constants.ID}{constants.COLON} </label>

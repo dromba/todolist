@@ -33,7 +33,7 @@ class TaskView extends Component {
     if (window.confirm("Are you sure you want to delete this record?")) {
       axios
         .get(
-          "http://localhost:4000/business/delete/" + this.props.match.params.id
+          "https://fast-temple-84635.herokuapp.com/delete/" + this.props.match.params.id
         )
         .then(res => {
           this.setState({ redirect: true });
@@ -45,7 +45,7 @@ class TaskView extends Component {
   componentDidMount = () => {
     axios
       .get(
-        "http://localhost:4000/business/taskview/" + this.props.match.params.id
+        "https://fast-temple-84635.herokuapp.com/business/taskview/" + this.props.match.params.id
       )
       .then(response => {
         this.setState({

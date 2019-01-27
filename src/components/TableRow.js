@@ -29,7 +29,7 @@ class TableRow extends Component {
     if (window.confirm("Are you sure you want to delete this record?")) {
       console.log(this.props.obj._id);
       axios
-        .get("http://localhost:4000/business/delete/" + this.props.obj._id)
+        .get("https://fast-temple-84635.herokuapp.com/business/delete/" + this.props.obj._id)
         .then(res => {
           console.log("deleted");
           this.props.delete(this.props.indice);
