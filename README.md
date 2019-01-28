@@ -1,5 +1,5 @@
 
-# Instruction
+# Instructions
 
 Live preview is available. At first, please start the server with the click on the link: https://fast-temple-84635.herokuapp.com
 
