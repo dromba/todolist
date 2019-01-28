@@ -1,3 +1,12 @@
+
+# Instruction
+
+Live preview is available. At first, please start the server with the click on the link: https://fast-temple-84635.herokuapp.com
+
+After startup, open the app here: https://todolist-react-tasklist.herokuapp.com
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
